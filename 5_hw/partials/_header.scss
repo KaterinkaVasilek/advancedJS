@@ -1,0 +1,61 @@
+.header {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 30px;
+        background-color: $red;
+    }
+    &__search {
+        box-sizing: border-box;
+        width: 400px;
+        color: $pink-light;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $pink-light;
+    }
+    &__btn {
+        background-color: $pink;
+        color: $white;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 10px;
+        padding: 15px 20px;
+        cursor: pointer;
+    }
+}
+
+.header__btn:hover {
+    background-color: $pink-light;
+    color: $pink;
+}
+
+.logo {
+    color: $pink-light;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.search {
+    &__btn {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        position: absolute;
+        cursor: pointer;
+    }
+    &__form {
+        position: relative;
+        margin-right: 50px;
+        display: inline-block;
+    }
+}
+
+.header__right {
+    position: relative;
+}
