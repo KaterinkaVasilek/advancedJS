@@ -1,0 +1,9 @@
+@import 'partials/variables';
+@import 'partials/header';
+@import 'partials/products';
+@import 'partials/cart';
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}

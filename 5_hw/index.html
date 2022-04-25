@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/75f07a92ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Online store</title>
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header__content container">
+                <div class="header__left">
+                    <h1 class="logo">Online Store</h1>
+                </div>
+                <div class="header__center">
+                    <form action="#" class="search__form">
+                        <input type="text" class="header__search" v-model="searchLine">
+                        <button class="search__btn" type="submit" @click="filterGoods"><i class="fas fa-search fa-2x"></i></button>
+                    </form>
+                </div>
+                <div class="header__right">
+                    <button class="header__btn" type="button">Корзина</button>
+                    <div class="cart" v-if="isVisibleCart">
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="container">
+                <div class="products">
+                    <div class="products__item" v-for="product of products" :key="products.id_product">
+                        <img :src="imgCatalog" alt="Some img">
+                        <div class="products__content">
+                            <h3>{{product.product_name}}</h3>
+                            <p>{{product.price}} ₽</p>
+                            <button class="products__btn" @click="addProduct(product)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
